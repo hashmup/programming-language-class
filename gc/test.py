@@ -5,12 +5,12 @@ def execute(cmd, args):
     call([cmd] + [str(x) for x in args])
 
 def main():
-    for i in range(16, 128, 16):
-        for j in range(32, 256, 16):
-            for k in range(10000, 100000, 10000):
+    for i in [16, 64, 128]:
+        for j in [32, 64, 128, 256]:
+            for k in [10000, 50000, 100000]:
                 print("--------------------")
                 print("cell size: %d\nlist length: %d\niterations: %d" % (i, j, k))
-                execute("time", ["./list",i, j, k])
+                execute("time", ["./list.out",i, j, k])
                 print("--------------------")
 
 if __name__ == "__main__":

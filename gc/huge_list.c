@@ -36,7 +36,7 @@ int main(int argc, char ** argv) {
   long l = (argc > 2 ? atol(argv[2]) : 32); /* リストの長さ */
   long m = (argc > 3 ? atol(argv[3]) : 1024); /* リストの個数 */
   long d = (argc > 4 ? atol(argv[4]) : 2);
-  long n = (argc > 5 ? atol(argv[5]) : 1000000);
+//  long n = (argc > 5 ? atol(argv[5]) : 1000000);
 
   GC_set_free_space_divisor(d);
   if (sz < sizeof(list)) sz = sizeof(list);
